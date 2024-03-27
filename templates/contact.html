@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Contact Us</h3>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <div class="form-actions">
+        <button type="submit" class="btn btn-success">Send</button>
+    </div>
+</form>
+{% endblock %}
